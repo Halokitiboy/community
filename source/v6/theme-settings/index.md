@@ -862,7 +862,7 @@ article:
       # 文章分类
       category:
         icon: fa-solid fa-folder-open
-      # 文章浏览计数
+      # 文章浏览计数，由busuanzi或评论系统（waline、twikoo、discuss、artalk）提供数据
       counter:
         icon: fa-solid fa-eye
         unit: '次浏览'
@@ -1602,7 +1602,8 @@ comments:
   service: artalk
   ...
   artalk:
-    server: http://127.0.0.1:8080/api    # 修改为自建的后端服务地址
+    server: http://127.0.0.1:8080 # 修改为自建的后端服务地址
+    pv: true # 是否显示文章阅读数，counter未设置未其他服务则可以开启
 ```
 
 其中，`placeholder` 支持在 front-matter 中设置。
